@@ -49,7 +49,7 @@ setopt bang_hist
 setopt prompt_subst
 
 # Initialize zplug
-source ~/.dotfiles/zplug/init.zsh
+source ~/.dotfiles/anvilabs/zplug/init.zsh
 
 # Load plugins
 source ~/.zshrc.plugins
@@ -105,16 +105,20 @@ z() {
   [ $# -gt 0 ] && _z "$*" && return
   cd "$(_z -l 2>&1 | fzf-tmux +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
 }
+if hash n 2>/dev/null; then
+  alias n="PROJECT_NAME='' n"
+fi
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
-# Other aliases
-alias syncdotfiles="rcup -v -d ~/.dotfiles/symlinks"
-alias ip="curl ipinfo.io/ip"
-if hash n 2>/dev/null; then
-  alias n="PROJECT_NAME='' n"
-fii
+# Synchronize base and local dotfiles
+syncdotfiles() {
+  for symlinks in ~/.dotfiles/*/symlinks; do
+    echo " -> rcup -v -d $symlinks"
+    rcup -v -d "$symlinks"
+  done
+}
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

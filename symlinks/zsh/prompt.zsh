@@ -70,7 +70,7 @@ git_prompt() {
 }
 
 powerline_prompt() {
-  ~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null
+  ~/.dotfiles/anvilabs/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null
 }
 
 PROMPT='$(powerline_prompt)'
