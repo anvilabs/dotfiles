@@ -87,7 +87,7 @@ source ~/.fzf.zsh
 alias e="$EDITOR"
 alias mkdir="mkdir -p"
 
-# Mac OS X aliases
+# macOS aliases
 alias unhidelibrary="chflags nohidden ~/Library"
 alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
