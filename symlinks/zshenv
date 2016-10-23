@@ -1,0 +1,39 @@
+export PATH="$PATH:/usr/local/sbin:$HOME/.bin"
+
+# Set default options for homebrew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+
+# Make vim the default editor
+export EDITOR=vim
+export GIT_EDITOR="${EDITOR}"
+export VISUAL="${EDITOR}"
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr
+export PYTHONIOENCODING='UTF-8'
+
+# Increase Bash history size to 32³ entries from the default 500
+export HISTSIZE='32768'
+export HISTFILESIZE="${HISTSIZE}"
+export SAVEHIST="${HISTSIZE}"
+# Omit duplicates and commands that begin with a space from history
+export HISTCONTROL="ignoreboth"
+# Set history file
+export HISTFILE="$HOME/.zsh_history"
+
+# Prefer US English and use UTF-8
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="${yellow}"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER='less -X'
+
+# Set default fzf options (https://github.com/junegunn/fzf)
+export FZF_DEFAULT_OPTS='-m'
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# Local config
+[[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "Brewfile": "ruby",
+    "tmux.conf": "shellscript",
+    "zsh{env,rc,rc.plugins}": "shellscript"
+  }
+}

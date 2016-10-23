@@ -1,0 +1,23 @@
+[core]
+  editor = vim
+  autocrlf = input
+  excludesfile = ~/.gitignore_global
+  # Enable parallel I/O for operations like "git diff".
+  preloadindex = true
+  # Use 12 characters for the abbreviated commit hash. I can currently make
+  # do with 10, but this should provide a certain level of safety for the
+  # near-ish future. See the interesting and well-researched article at
+  # http://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/
+  abbrev = 12
+[push]
+  default = current
+[color]
+  ui = auto
+[commit]
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[include]
+  path = ~/.gitconfig.local

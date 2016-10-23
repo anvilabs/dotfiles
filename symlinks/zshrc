@@ -1,0 +1,120 @@
+# zsh configuration
+COMPLETION_WAITING_DOTS="true"
+DISABLE_AUTO_UPDATE=true
+
+# Do not record an event that was just recorded again
+setopt hist_ignore_dups
+
+# Delete an old recorded event if a new event is a duplicate
+setopt hist_ignore_all_dups
+setopt hist_save_nodups
+
+# Expire a duplicate event first when trimming history
+setopt hist_expire_dups_first
+
+# Do not display a previously found event
+setopt hist_find_no_dups
+
+# Share history
+setopt share_history
+
+# Pack extra blank
+setopt hist_reduce_blanks
+
+# Write to the history file immediately, not when the shell exits
+setopt inc_append_history
+
+# Remove comannd of 'hostory' or 'fc -l' from history list
+setopt hist_no_store
+
+# Remove functions from history list
+setopt hist_no_functions
+
+# Record start and end time to history file
+setopt extended_history
+
+# Ignore the beginning space command to history file
+setopt hist_ignore_space
+
+# Append to history file
+setopt append_history
+
+# Edit history file during call history before executing
+setopt hist_verify
+
+# Enable history system like a Bash
+setopt bang_hist
+
+# Expand parameters and substitude commands in prompts
+setopt prompt_subst
+
+# Initialize zplug
+source ~/.dotfiles/zplug/init.zsh
+
+# Load plugins
+source ~/.zshrc.plugins
+
+# Install missing plugins
+if ! zplug check --verbose; then
+  echo; zplug install
+fi
+
+# Source installed plugins
+zplug load
+
+# zsh-syntax-highlighting configuration
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+
+# Bind up and down keys for zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+if hash pyenv 2>/dev/null; then
+  # Activate python environment
+  eval "$(pyenv init -)"
+fi
+
+if hash rbenv 2>/dev/null; then
+  # Activate ruby environment
+  eval "$(rbenv init -)"
+fi
+
+# Activate fzf
+source ~/.fzf.zsh
+
+# Unix aliases
+alias e="$EDITOR"
+alias mkdir="mkdir -p"
+
+# Mac OS X aliases
+alias unhidelibrary="chflags nohidden ~/Library"
+alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
+
+# Replacements
+alias ls="k -h"
+alias lss="ls -ah"
+if hash trash 2>/dev/null; then
+  alias rm=trash
+fi
+unalias z 2> /dev/null
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf-tmux +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
+}
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# Other aliases
+alias syncdotfiles="rcup -v -d ~/.dotfiles/symlinks"
+alias ip="curl ipinfo.io/ip"
+if hash n 2>/dev/null; then
+  alias n="PROJECT_NAME='' n"
+fii
+
+# Local config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
