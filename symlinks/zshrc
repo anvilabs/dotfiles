@@ -1,5 +1,5 @@
 # zsh configuration
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS=true
 DISABLE_AUTO_UPDATE=true
 
 # Do not record an event that was just recorded again
@@ -84,7 +84,7 @@ fi
 source ~/.fzf.zsh
 
 # Unix aliases
-alias e="$EDITOR"
+alias e='$EDITOR'
 alias mkdir="mkdir -p"
 
 # macOS aliases

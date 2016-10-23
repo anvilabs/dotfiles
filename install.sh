@@ -7,9 +7,9 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install Xcode command line tools
-xcode-select --install 2> /dev/null
-if [ $? -eq 0 ]; then
-  read -p "Press [Enter] key when Xcode command line tools are installed..."
+
+if xcode-select --install 2> /dev/null; then
+  read -r -p "Press [Enter] key when Xcode command line tools are installed..."
 fi
 
 # Install Homebrew if we don't have it
@@ -22,7 +22,7 @@ fi
 
 # Install zsh
 brew install zsh
-sudo chsh -s $(which zsh)
+sudo chsh -s "$(which zsh)"
 
 # Install rcm
 brew install thoughtbot/formulae/rcm
@@ -36,7 +36,7 @@ rcup -v -d ~/.dotfiles/symlinks
 # Copy fonts
 rsync -av --no-perms ~/.dotfiles/resources/fonts/ ~/Library/Fonts
 
-read -p "? Configure your python environment (with pyenv)? (y/n) " -n 1
+read -r -p "? Configure your python environment (with pyenv)? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure python environment
@@ -46,7 +46,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   pyenv rehash
 fi
 
-read -p "? Configure your ruby environment (with rbenv)? (y/n) " -n 1
+read -r -p "? Configure your ruby environment (with rbenv)? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure ruby environment
@@ -56,7 +56,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   rbenv rehash
 fi
 
-read -p "? Configure your node environment (with n)? (y/n) " -n 1
+read -r -p "? Configure your node environment (with n)? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure node environment
@@ -83,7 +83,7 @@ brew install trash
 # Remove outdated versions from the cellar
 brew cleanup
 
-read -p "? Create a cron job to update all your globally installed packages? (y/n) " -n 1
+read -r -p "? Create a cron job to update all your globally installed packages? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Add a cron job to update installed packages

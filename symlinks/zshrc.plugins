@@ -1,5 +1,5 @@
 # Local plugins
-zplug "~/.zsh", from:local, use:"*.zsh"
+zplug ~/.zsh, from:local, use:"*.zsh"
 
 # Oh-my-zsh plugins
 zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
