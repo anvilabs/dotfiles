@@ -45,15 +45,15 @@ This repo also includes the Spacegray color theme both for [Terminal.app](https:
 
 ## Make your own customizations
 
-Put your customizations in `~/.dotfiles/symlinks/` appended with `.local`. Customizable symlinks include:
+Put your customizations either in `~/.dotfiles/symlinks/` or at the root appended with `.local`. Customizable symlinks include:
 
-- symlinks/gitconfig.local
-- symlinks/tmux.conf.local
-- symlinks/vimrc.local
-- symlinks/vimrc.bundles.local
-- symlinks/zshenv.local
-- symlinks/zshrc.local
-- symlinks/zshrc.plugins.local
+- `gitconfig.local`
+- `tmux.conf.local`
+- `vimrc.local`
+- `vimrc.bundles.local`
+- `zshenv.local`
+- `zshrc.local`
+- `zshrc.plugins.local`
 
 For example, your `gitconfig.local` might look like the following:
 
@@ -69,7 +69,7 @@ For example, your `gitconfig.local` might look like the following:
   program = /usr/local/bin/gpg2
 ```
 
-When you're done updating your dotfiles, run `$ syncdotfiles` to apply your changes.
+If you added your local dotfiles in `~/.dotfiles/symlinks`, run `$ syncdotfiles` to apply your changes.
 
 ## Credits
 
