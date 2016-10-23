@@ -69,6 +69,8 @@ For example, your `gitconfig.local` might look like the following:
   program = /usr/local/bin/gpg2
 ```
 
+When you're done updating your dotfiles, run `$ syncdotfiles` to apply your changes.
+
 ## Credits
 
 Inspired by:
