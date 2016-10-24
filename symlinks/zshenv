@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 export PATH="$PATH:/usr/local/sbin:$HOME/.bin"
 
 # Set default options for homebrew cask

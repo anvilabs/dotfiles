@@ -67,7 +67,7 @@ This repo also includes the Spacegray color theme both for [Terminal.app](https:
 
 ## Make your own customizations
 
-Put your customizations either in `~/.dotfiles/<username>/symlinks/` or at the root appended with `.local`. Customizable symlinks include:
+Put your customizations either in `~/.dotfiles-local/symlinks/` or at the root appended with `.local`. Customizable symlinks include:
 
 - `gitconfig.local`
 - `tmux.conf.local`
@@ -81,7 +81,7 @@ For example, your `gitconfig.local` might look like the following:
 
 ```ini
 [user]
-  name = Ayan Yenbekbay
+  name = Ayan Yenbekbays
   email = ayan.yenb@gmail.com
   github = yenbekbay
   signingkey = ayan.yenb@gmail.com
@@ -91,7 +91,7 @@ For example, your `gitconfig.local` might look like the following:
   program = /usr/local/bin/gpg2
 ```
 
-If you added your local dotfiles in `~/.dotfiles/<username>/symlinks`, run `$ syncdotfiles` to apply your changes.
+If you added your local dotfiles in `~/.dotfiles-local/symlinks`, run `syncdotfiles` to apply your changes.
 
 ## Credits
 

@@ -51,7 +51,7 @@ setopt bang_hist
 setopt prompt_subst
 
 # Initialize zplug
-source ~/.dotfiles/anvilabs/zplug/init.zsh
+source ~/.dotfiles/zplug/init.zsh
 
 # Load plugins
 source ~/.zshrc.plugins
@@ -116,10 +116,11 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Synchronize base and local dotfiles
 syncdotfiles() {
-  for symlinks in ~/.dotfiles/*/symlinks; do
-    echo " -> rcup -v -d $symlinks"
-    rcup -v -d "$symlinks"
-  done
+  rcup -v -d ~/.dotfiles/symlinks
+
+  if [ -d ~/.dotfiles-local ]; then
+    rcup -v -d ~/.dotfiles-local/symlinks
+  fi
 }
 
 # Local config

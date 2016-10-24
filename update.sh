@@ -29,7 +29,7 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
   fi
 
   echo "** Updating dotfiles submodules"
-  (cd ~/.dotfiles/anvilabs && git submodule foreach git pull origin master)
+  (cd ~/.dotfiles && git submodule foreach git pull origin master)
 
   echo "** Updating gems"
   if hash rbenv 2>/dev/null; then

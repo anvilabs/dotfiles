@@ -28,13 +28,13 @@ sudo chsh -s "$(which zsh)"
 brew install thoughtbot/formulae/rcm
 
 # Clone dotfiles from Github
-git clone --recursive https://github.com/anvilabs/dotfiles.git ~/.dotfiles/anvilabs
+git clone --recursive https://github.com/anvilabs/dotfiles.git ~/.dotfiles
 
 # Synchronize symlinks
-rcup -v -d ~/.dotfiles/anvilabs/symlinks
+rcup -v -d ~/.dotfiles/symlinks
 
 # Copy fonts
-rsync -av --no-perms ~/.dotfiles/anvilabs/resources/fonts/ ~/Library/Fonts
+rsync -av --no-perms ~/.dotfiles/resources/fonts/ ~/Library/Fonts
 
 read -r -p "? Configure your python environment (with pyenv)? (y/n) " -n 1
 echo ""
@@ -65,13 +65,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 # Configure powerline-shell
-ln -s ~/.dotfiles/anvilabs/powerline-config.py ~/.dotfiles/anvilabs/powerline-shell/config.py
-(cd ~/.dotfiles/anvilabs/powerline-shell && python install.py)
+ln -s ~/.dotfiles/powerline-config.py ~/.dotfiles/powerline-shell/config.py
+(cd ~/.dotfiles/powerline-shell && python install.py)
 
 # Configure vim
 brew install vim
 mkdir ~/.vim/autoload
-ln -s ~/.dotfiles/anvilabs/vim-plug/plug.vim ~/.vim/autoload/plug.vim
+ln -s ~/.dotfiles/vim-plug/plug.vim ~/.vim/autoload/plug.vim
 
 # Install tmux
 brew install tmux
@@ -98,7 +98,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       <array>
         <string>sh</string>
         <string>-c</string>
-        <string>yes n | $HOME/.dotfiles/anvilabs/update.sh</string>
+        <string>yes n | $HOME/.dotfiles/update.sh</string>
       </array>
       <key>RunAtLoad</key>
       <true/>
