@@ -89,8 +89,8 @@ alias mkdir="mkdir -p"
 
 # macOS aliases
 alias unhidelibrary="chflags nohidden ~/Library"
-alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias showdotfiles="showfiles"
+alias hidedotfiles="hidefiles"
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
 

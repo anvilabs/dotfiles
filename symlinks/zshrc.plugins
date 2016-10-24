@@ -2,16 +2,7 @@
 zplug ~/.zsh, from:local, use:"*.zsh"
 
 # Oh-my-zsh plugins
-zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
-zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/gem", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh, nice:10
-zplug "plugins/node", from:oh-my-zsh
-zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/python", from:oh-my-zsh
-zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
 
 # Remote plugins

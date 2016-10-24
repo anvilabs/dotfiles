@@ -1,20 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
 " Plugins
-Plug 'airblade/vim-gitgutter'
-Plug 'christoomey/vim-run-interactive'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'justinmk/vim-gtfo'
-Plug 'kchmck/vim-coffee-script'
-Plug 'keith/investigate.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'pbrisbin/vim-mkdir'
 Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'justinmk/vim-gtfo'
+Plug 'pangloss/vim-javascript'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
