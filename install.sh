@@ -27,6 +27,9 @@ sudo chsh -s "$(which zsh)"
 # Install rcm
 brew install thoughtbot/formulae/rcm
 
+# Install git just in case it isn't present
+brew install git
+
 # Clone dotfiles from Github
 git clone --recursive https://github.com/anvilabs/dotfiles.git ~/.dotfiles
 
