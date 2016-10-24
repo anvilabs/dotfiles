@@ -34,12 +34,34 @@ Unix:
 - [vim-plug](https://github.com/junegunn/vim-plug) for managing vim plugins
 - [Powerline](https://github.com/banga/powerline-shell) for your shell prompt
 - [A cron job](https://raw.githubusercontent.com/anvilabs/dotfiles/master/update.sh) to regularly update your global packages
+- [trash](http://hasseg.org/trash/) as a replacement for the `rm` command
 
 Programming language environments (if you want them):
 
 - [pyenv](https://github.com/yyuu/pyenv) for Python
 - [rbenv](https://github.com/rbenv/rbenv) for Ruby
 - [n](https://github.com/tj/n) for Node.js
+
+Bundled zsh plugins:
+- [fzf](https://github.com/junegunn/fzf) fuzzy finder
+- [z](https://github.com/rupa/z) integrated with [fzf](https://github.com/junegunn/fzf). Run the `z` command to see the list of your most used directories
+- [k](https://github.com/supercrabtree/k) as a replacement for `ls`
+- [History substring search](https://github.com/zsh-users/zsh-history-substring-search) with UP and DOWN arrows
+- [Additional completion definitions](https://github.com/zsh-users/zsh-completions)
+- [Syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [Useful macOs utilities](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx)
+
+Bundled Vim plugins:
+- [Syntax checking](https://github.com/scrooloose/syntastic)
+- [Git diff in the "gutter"](https://github.com/airblade/vim-gitgutter)
+- [Go to Terminal or File manager](https://github.com/justinmk/vim-gtfo)
+- [Better Javascript syntax support](https://github.com/pangloss/vim-javascript)
+- [Commenting out](https://github.com/tomtom/tcomment_vim)
+- [Git wrapper](https://github.com/tpope/vim-fugitive)
+- [Enable repeating supported plugin maps](https://github.com/tpope/vim-repeat)
+- [Quoting/parenthesizing](https://github.com/tpope/vim-surround)
+- [Code completion](https://github.com/Valloric/YouCompleteMe)
+- [fzf commands](https://github.com/junegunn/fzf.vim)
 
 This repo also includes the Spacegray color theme both for [Terminal.app](https://github.com/wtanna/Spacegray-OSX-Terminal-Theme) and for [iTerm2](https://github.com/christianbundy/spacegrey-iterm). It will set up the theme automatically with the [Monoid font](https://larsenwork.com/monoid/) for Terminal.app.
 
