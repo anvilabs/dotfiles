@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # zsh configuration
 COMPLETION_WAITING_DOTS=true
 DISABLE_AUTO_UPDATE=true

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Local plugins
 zplug ~/.zsh, from:local, use:"*.zsh"
 
