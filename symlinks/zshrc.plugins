@@ -12,6 +12,7 @@ zplug "plugins/z", from:oh-my-zsh
 # Remote plugins
 zplug "chriskempson/base16-shell", use:"scripts/base16-$BASE16_SCHEME.sh", nice:-19
 zplug "chriskempson/base16-shell", use:colortest, as:command
+zplug "djui/alias-tips"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
