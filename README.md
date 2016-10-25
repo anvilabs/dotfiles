@@ -100,6 +100,7 @@ Inspired by:
 - [@b4b4r07's dotfiles](https://github.com/b4b4r07/dotfiles)
 - [@mathiasbynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [@thoughtbot's dotfiles](https://github.com/thoughtbot/dotfiles)
+- [@hamvocke's dotfiles](https://github.com/hamvocke/dotfiles)
 
 ## License
 
