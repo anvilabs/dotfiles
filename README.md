@@ -32,12 +32,12 @@ Unix:
 - [zsh](http://www.zsh.org/) as your default shell
 - [zplug](https://github.com/zplug/zplug) for managing zsh plugins
 - [vim-plug](https://github.com/junegunn/vim-plug) for managing vim plugins
+- [tpm](https://github.com/tmux-plugins/tpm) for managing tmux plugins
 - [Powerline](https://github.com/banga/powerline-shell) for your shell prompt
 - [A cron job](https://raw.githubusercontent.com/anvilabs/dotfiles/master/update.sh) to regularly update your global packages
 - [trash](http://hasseg.org/trash/) as a replacement for the `rm` command
 
 Programming language environments (if you want them):
-
 - [pyenv](https://github.com/yyuu/pyenv) for Python
 - [rbenv](https://github.com/rbenv/rbenv) for Ruby
 - [n](https://github.com/tj/n) for Node.js
@@ -49,7 +49,8 @@ Bundled zsh plugins:
 - [History substring search](https://github.com/zsh-users/zsh-history-substring-search) with UP and DOWN arrows
 - [Additional completion definitions](https://github.com/zsh-users/zsh-completions)
 - [Syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [Useful macOs utilities](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx)
+- [Useful macOS utilities](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx)
+- [A helper to remember shell aliases](https://github.com/djui/alias-tips)
 
 Bundled Vim plugins:
 - [Syntax checking](https://github.com/scrooloose/syntastic)
@@ -63,6 +64,12 @@ Bundled Vim plugins:
 - [Code completion](https://github.com/Valloric/YouCompleteMe)
 - [fzf commands](https://github.com/junegunn/fzf.vim)
 
+Bundled tmux plugins (run `prefix + I` to install them):
+- [Basic tmux settings everyone can agree on](https://github.com/tmux-plugins/tmux-sensible)
+- [Standard pane key-bindings](https://github.com/tmux-plugins/tmux-pain-control)
+- [Prefix key press indicator](https://github.com/tmux-plugins/tmux-prefix-highlight)
+- [Copying to system clipboard](https://github.com/tmux-plugins/tmux-yank)
+
 This repo also includes the Base16 Ocean Dark color theme both for [Terminal.app](https://github.com/korzhyk/base16-terminal-app/blob/master/base16-ocean.dark.terminal) and [iTerm2](https://github.com/chriskempson/base16-iterm2/blob/master/base16-ocean.dark.itermcolors), and the [Monoid font](https://larsenwork.com/monoid/).
 
 ## Make your own customizations
@@ -71,6 +78,7 @@ Put your customizations either in `~/.dotfiles-local/symlinks/` or at the root a
 
 - `gitconfig.local`
 - `tmux.conf.local`
+- `tmux.plugins.local`
 - `vimrc.local`
 - `vimrc.bundles.local`
 - `zshenv.local`
