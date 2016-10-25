@@ -63,7 +63,7 @@ Bundled Vim plugins:
 - [Code completion](https://github.com/Valloric/YouCompleteMe)
 - [fzf commands](https://github.com/junegunn/fzf.vim)
 
-This repo also includes the Spacegray color theme both for [Terminal.app](https://github.com/wtanna/Spacegray-OSX-Terminal-Theme) and for [iTerm2](https://github.com/christianbundy/spacegrey-iterm). It will set up the theme automatically with the [Monoid font](https://larsenwork.com/monoid/) for Terminal.app.
+This repo also includes the Base16 Ocean Dark color theme both for [Terminal.app](https://github.com/korzhyk/base16-terminal-app/blob/master/base16-ocean.dark.terminal) and [iTerm2](https://github.com/chriskempson/base16-iterm2/blob/master/base16-ocean.dark.itermcolors), and the [Monoid font](https://larsenwork.com/monoid/).
 
 ## Make your own customizations
 
