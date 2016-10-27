@@ -115,13 +115,7 @@ fi
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Synchronize base and local dotfiles
-syncdotfiles() {
-  rcup -v -d ~/.dotfiles/symlinks
-
-  if [ -d ~/.dotfiles-local ]; then
-    rcup -v -d ~/.dotfiles-local/symlinks
-  fi
-}
+alias syncdotfiles="rcup -v"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
