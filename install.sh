@@ -63,8 +63,10 @@ read -r -p "? Configure your node environment (with n)? (y/n) " -n 1
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure node environment
-  curl -fsSL http://git.io/n-install | sh
-  n latest
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+  nvm install node
+  nvm use node
+  npm install -g yarn
 fi
 
 # Configure powerline-shell
