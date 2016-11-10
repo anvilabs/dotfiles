@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 LOG_FILE=~/Library/Logs/update.sh.log
 
