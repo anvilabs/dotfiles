@@ -76,7 +76,7 @@ ln -s ~/.dotfiles/powerline-config.py ~/.dotfiles/powerline-shell/config.py
 
 # Configure vim
 brew install vim
-mkdir ~/.vim/autoload
+mkdir -p ~/.vim/autoload
 ln -s ~/.dotfiles/vim-plug/plug.vim ~/.vim/autoload/plug.vim
 
 # Install tmux
