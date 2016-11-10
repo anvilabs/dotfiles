@@ -20,7 +20,7 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
     echo "** Updating brew packages"
     brew upgrade
 
-    echo "** Updating brew apps"
+    echo "** Updating brew cask formulae"
     brew cask update
 
     echo "** Cleaning up brew cellar"
@@ -37,7 +37,7 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
   fi
   gem update
 
-  echo ""
+  echo "----------"
 else
   echo "No internet connection"
 fi
