@@ -22,7 +22,8 @@ fi
 
 # Install zsh
 brew install zsh
-sudo chsh -s "$(which zsh)"
+which zsh | sudo tee -a /etc/shells
+chsh -s "$(which zsh)"
 
 # Install rcm
 brew install thoughtbot/formulae/rcm
