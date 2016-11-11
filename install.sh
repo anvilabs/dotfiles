@@ -74,6 +74,10 @@ fi
 ln -s ~/.dotfiles/powerline-config.py ~/.dotfiles/powerline-shell/config.py
 (cd ~/.dotfiles/powerline-shell && python install.py)
 
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # Configure vim
 brew install vim
 mkdir -p ~/.vim/autoload

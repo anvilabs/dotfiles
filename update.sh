@@ -29,6 +29,7 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
   fi
 
   echo "** Updating dotfiles submodules"
+  (cd ~/.fzf && git pull)
   (cd ~/.dotfiles && git submodule foreach git pull origin master)
 
   echo "** Updating gems"
