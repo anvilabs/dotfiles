@@ -20,6 +20,9 @@ else
   brew update
 fi
 
+# Install coreutils
+brew install coreutils
+
 # Install zsh
 brew install zsh
 which zsh | sudo tee -a /etc/shells
