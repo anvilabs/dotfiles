@@ -117,7 +117,7 @@ fi
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
-# Synchronize base and local dotfiles
+# Synchronize dotfiles
 alias syncdotfiles="rcup -v"
 
 # Local config
