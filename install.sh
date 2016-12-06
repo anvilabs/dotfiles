@@ -43,7 +43,7 @@ rcup -v -d ~/.dotfiles/symlinks
 # Copy fonts
 rsync -av --no-perms ~/.dotfiles/resources/fonts/ ~/Library/Fonts
 
-read -k "? Configure your python environment (with pyenv)? (y/n) "
+read -q "? Configure your python environment (with pyenv)? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure python environment
@@ -53,7 +53,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   pyenv rehash
 fi
 
-read -k "? Configure your ruby environment (with rbenv)? (y/n) "
+read -q "? Configure your ruby environment (with rbenv)? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure ruby environment
@@ -63,7 +63,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   rbenv rehash
 fi
 
-read -k "? Configure your node environment (with n)? (y/n) "
+read -q "? Configure your node environment (with n)? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure node environment
@@ -96,7 +96,7 @@ brew install trash
 # Remove outdated versions from the cellar
 brew cleanup
 
-read -k "? Create a cron job to update all your globally installed packages? (y/n) "
+read -q "? Create a cron job to update all your globally installed packages? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Add a cron job to update installed packages
