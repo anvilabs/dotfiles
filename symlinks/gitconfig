@@ -13,8 +13,6 @@
   default = current
 [color]
   ui = auto
-[commit]
-  template = ~/.gitmessage
 [fetch]
   prune = true
 [rebase]
