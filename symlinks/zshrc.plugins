@@ -12,7 +12,7 @@ zplug "djui/alias-tips"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Local config
 [[ -f ~/.zshrc.plugins.local ]] && source ~/.zshrc.plugins.local

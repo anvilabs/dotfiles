@@ -62,7 +62,7 @@ if ! zplug check --verbose; then
 fi
 
 # Source installed plugins
-zplug load
+zplug load >/dev/null
 
 # zsh-syntax-highlighting configuration
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
