@@ -125,6 +125,9 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
+" Add spell checking and automatic wrapping at the recommended 72 columns to git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
