@@ -63,15 +63,20 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   rbenv rehash
 fi
 
-read -q "? Configure your node environment (with n)? (y/n) "
+# Install node
+brew install node
+
+read -q "? Configure your node environment (with nodenv)? (y/n) "
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure node environment
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
-  nvm install node
-  nvm use node
-  npm install -g yarn
+  brew install nodenv
+  nodenv global system
+  nodenv rehash
 fi
+
+# Install yarn
+brew install yarn
 
 # Configure powerline-shell
 ln -s ~/.dotfiles/powerline-config.py ~/.dotfiles/powerline-shell/config.py

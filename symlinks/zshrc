@@ -82,8 +82,10 @@ if hash rbenv 2>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
-# Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+if hash nodenv 2>/dev/null; then
+  # Activate node environment
+  eval "$(nodenv init -)"
+fi
 
 # Activate fzf
 source ~/.fzf.zsh
