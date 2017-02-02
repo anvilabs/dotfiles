@@ -9,7 +9,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install Xcode command line tools
 
 if xcode-select --install 2> /dev/null; then
-  read "Press [Enter] key when Xcode command line tools are installed..."
+  read "? Press [Enter] key when Xcode command line tools are installed..."
 fi
 
 # Install Homebrew if we don't have it
