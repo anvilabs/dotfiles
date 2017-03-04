@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 
-# Local plugins
-zplug ~/.zsh, from:local, use:"*.zsh"
-
 # Oh-my-zsh plugins
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
