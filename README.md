@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/platform-osx-lightgrey.svg)
 
-<img alt="Figlet logo" src=".github/figlet-logo.png" width=542">
+<img alt="Figlet logo" src=".github/figlet-logo.png" width="542">
 
 This repository holds our opinionated [configuration files](https://en.wikipedia.org/wiki/Configuration_file).
 
