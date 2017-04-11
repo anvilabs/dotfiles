@@ -3,7 +3,7 @@
 # zsh configuration
 COMPLETION_WAITING_DOTS=true
 DISABLE_AUTO_UPDATE=true
-PROMPT='$(~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh --cwd-mode dironly 2> /dev/null)'
+PROMPT="$(~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh --cwd-mode dironly 2> /dev/null)"
 RPROMPT='[%*]'
 
 # Do not record an event that was just recorded again
@@ -94,18 +94,18 @@ source ~/.fzf.zsh
 
 # Unix aliases
 alias e='$EDITOR'
-alias mkdir="mkdir -p"
+alias mkdir='mkdir -p'
 
 # macOS aliases
-alias unhidelibrary="chflags nohidden ~/Library"
-alias showdotfiles="showfiles"
-alias hidedotfiles="hidefiles"
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
+alias unhidelibrary='chflags nohidden ~/Library'
+alias showdotfiles='showfiles'
+alias hidedotfiles='hidefiles'
+alias cleanup='find . -type f -name "*.DS_Store" -ls -delete'
+alias pubkey='more ~/.ssh/id_rsa.pub | pbcopy | printf "=> Public key copied to pasteboard.\n"'
 
 # Replacements
-alias ls="k -h"
-alias lss="ls -ah"
+alias ls='k -h'
+alias lss='ls -ah'
 if hash trash 2>/dev/null; then
   alias rm=trash
 fi
@@ -115,14 +115,14 @@ z() {
   cd "$(_z -l 2>&1 | fzf-tmux +s --tac --query "$*" | sed 's/^[0-9,.]* *//')"
 }
 if hash n 2>/dev/null; then
-  alias n="PROJECT_NAME='' n"
+  alias n='PROJECT_NAME="" n'
 fi
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Synchronize dotfiles
-alias syncdotfiles="rcup -v"
+alias syncdotfiles='rcup -v'
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

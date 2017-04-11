@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-export PATH="$PATH:/usr/local/sbin"
+export PATH="${PATH}:/usr/local/sbin"
 
 # Set default options for homebrew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
 
 # Make vim the default editor
 export EDITOR=vim
@@ -18,9 +18,9 @@ export HISTSIZE='32768'
 export HISTFILESIZE="${HISTSIZE}"
 export SAVEHIST="${HISTSIZE}"
 # Omit duplicates and commands that begin with a space from history
-export HISTCONTROL="ignoreboth"
+export HISTCONTROL='ignoreboth'
 # Set history file
-export HISTFILE="$HOME/.zsh_history"
+export HISTFILE="${HOME}/.zsh_history"
 
 # Prefer US English and use UTF-8
 export LANG='en_US.UTF-8'
@@ -35,7 +35,7 @@ export MANPAGER='less -X'
 # Set default fzf options (https://github.com/junegunn/fzf)
 export FZF_DEFAULT_OPTS='-m'
 export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 # Local config
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local

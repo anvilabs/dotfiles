@@ -9,36 +9,36 @@ fi
 
 exec 1> >(while read line; do echo "$(date): ${line}" >> $LOG_FILE; done) 2>&1
 
-export PATH="$PATH:/usr/local/bin:$HOME/.rbenv/bin"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+export PATH="${PATH}:/usr/local/bin:${HOME}/.rbenv/bin"
+export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
 
 if ping -c 1 google.com >> /dev/null 2>&1; then
   if hash brew 2>/dev/null; then
-    echo "** Updating brew"
+    echo '** Updating brew'
     brew update
 
-    echo "** Updating brew packages"
+    echo '** Updating brew packages'
     brew upgrade
 
-    echo "** Updating brew cask formulae"
+    echo '** Updating brew cask formulae'
     brew cask update
 
-    echo "** Cleaning up brew cellar"
+    echo '** Cleaning up brew cellar'
     brew cleanup
     brew cask cleanup
   fi
 
-  echo "** Updating dotfiles submodules"
+  echo '** Updating dotfiles submodules'
   (cd ~/.fzf && git pull)
   (cd ~/.dotfiles && git submodule foreach git pull origin master)
 
-  echo "** Updating gems"
+  echo '** Updating gems'
   if hash rbenv 2>/dev/null; then
     eval "$(rbenv init -)"
   fi
   gem update
 
-  echo "----------"
+  echo '----------'
 else
-  echo "No internet connection"
+  echo 'No internet connection'
 fi

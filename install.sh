@@ -9,7 +9,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install Xcode command line tools
 
 if xcode-select --install 2> /dev/null; then
-  read "? Press [Enter] key when Xcode command line tools are installed..."
+  read '? Press [Enter] key when Xcode command line tools are installed...'
 fi
 
 # Install Homebrew if we don't have it
@@ -43,8 +43,8 @@ rcup -v -d ~/.dotfiles/symlinks
 # Copy fonts
 rsync -av --no-perms ~/.dotfiles/resources/fonts/ ~/Library/Fonts
 
-read -q "? Configure your python environment (with pyenv)? (y/n) "
-echo ""
+read -q '? Configure your python environment (with pyenv)? (y/n) '
+echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure python environment
   brew install pyenv
@@ -53,8 +53,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   pyenv rehash
 fi
 
-read -q "? Configure your ruby environment (with rbenv)? (y/n) "
-echo ""
+read -q '? Configure your ruby environment (with rbenv)? (y/n) '
+echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure ruby environment
   brew install rbenv ruby-build
@@ -66,8 +66,8 @@ fi
 # Install node
 brew install node
 
-read -q "? Configure your node environment (with nodenv)? (y/n) "
-echo ""
+read -q '? Configure your node environment (with nodenv)? (y/n) '
+echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure node environment
   brew install nodenv
@@ -101,8 +101,8 @@ brew install trash
 # Remove outdated versions from the cellar
 brew cleanup
 
-read -q "? Create a cron job to update all your globally installed packages? (y/n) "
-echo ""
+read -q '? Create a cron job to update all your globally installed packages? (y/n) '
+echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Add a cron job to update installed packages
   cat > ~/Library/LaunchAgents/co.anvilabs.update.plist <<EOF
@@ -135,7 +135,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   </plist>
 EOF
   launchctl load ~/Library/LaunchAgents/co.anvilabs.update.plist
-  echo "Added a cron job at ~/Library/LaunchAgents/co.anvilabs.update.plist"
+  echo 'Added a cron job at ~/Library/LaunchAgents/co.anvilabs.update.plist'
 fi
 
-echo "Done!"
+echo 'Done!'
