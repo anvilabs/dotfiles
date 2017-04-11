@@ -66,6 +66,9 @@ fi
 # Install node
 brew install node
 
+# Avoid warnings about node binary path
+npm config set scripts-prepend-node-path false
+
 read -q '? Configure your node environment (with nodenv)? (y/n) '
 echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
