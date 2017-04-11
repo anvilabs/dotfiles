@@ -48,8 +48,8 @@ echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure python environment
   brew install pyenv
-  pyenv install 3.6.0
-  pyenv global 3.6.0
+  pyenv install 3.6.1
+  pyenv global 3.6.1
   pyenv rehash
 fi
 
@@ -58,8 +58,8 @@ echo ''
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   # Configure ruby environment
   brew install rbenv ruby-build
-  rbenv install 2.4.0
-  rbenv global 2.4.0
+  rbenv install 2.4.1
+  rbenv global 2.4.1
   rbenv rehash
 fi
 
