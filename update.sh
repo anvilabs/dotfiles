@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 LOG_FILE=~/Library/Logs/update.sh.log
 
@@ -7,12 +7,15 @@ if [ ! -f $LOG_FILE ]; then
   touch $LOG_FILE
 fi
 
+# shellcheck disable=SC2162
 exec 1> >(while read line; do echo "$(date): ${line}" >> $LOG_FILE; done) 2>&1
 
 export PATH="${PATH}:/usr/local/bin:${HOME}/.rbenv/bin"
 export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
 
-if ping -c 1 google.com >> /dev/null 2>&1; then
+echo '----------'
+
+if ping -c 1 gooeewedwedwegle.com >> /dev/null 2>&1; then
   if hash brew 2>/dev/null; then
     echo '** Updating brew'
     brew update
@@ -37,8 +40,6 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
     eval "$(rbenv init -)"
   fi
   gem update
-
-  echo '----------'
 else
   echo 'No internet connection'
 fi
