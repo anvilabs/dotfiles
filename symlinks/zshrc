@@ -3,7 +3,7 @@
 # zsh configuration
 COMPLETION_WAITING_DOTS=true
 DISABLE_AUTO_UPDATE=true
-PROMPT="$(~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh --cwd-mode dironly 2> /dev/null)"
+PROMPT='$(~/.dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)'
 RPROMPT='[%*]'
 
 # Do not record an event that was just recorded again
