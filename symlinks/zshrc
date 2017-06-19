@@ -103,6 +103,12 @@ alias hidedotfiles='hidefiles'
 alias cleanup='find . -type f -name "*.DS_Store" -ls -delete'
 alias pubkey='more ~/.ssh/id_rsa.pub | pbcopy | printf "=> Public key copied to pasteboard.\n"'
 
+# docker functions
+docker-clean() {
+  docker ps -aqf status=exited | xargs docker rm
+  docker images -qf dangling=true | xargs docker rmi
+}
+
 # Replacements
 alias ls='k -h'
 alias lss='ls -ah'
