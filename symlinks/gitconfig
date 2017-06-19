@@ -2,6 +2,7 @@
   editor = vim
   autocrlf = input
   excludesfile = ~/.gitignore_global
+  ignorecase = false
   # Enable parallel I/O for operations like "git diff".
   preloadindex = true
   # Use 12 characters for the abbreviated commit hash. I can currently make
