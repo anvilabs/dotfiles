@@ -23,9 +23,6 @@ if ping -c 1 google.com >> /dev/null 2>&1; then
     echo '** Updating brew packages'
     brew upgrade
 
-    echo '** Updating brew cask formulae'
-    brew cask update
-
     echo '** Cleaning up brew cellar'
     brew cleanup
     brew cask cleanup
