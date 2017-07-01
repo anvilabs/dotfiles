@@ -15,7 +15,7 @@ export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/
 
 echo '----------'
 
-if ping -c 1 gooeewedwedwegle.com >> /dev/null 2>&1; then
+if ping -c 1 google.com >> /dev/null 2>&1; then
   if hash brew 2>/dev/null; then
     echo '** Updating brew'
     brew update
