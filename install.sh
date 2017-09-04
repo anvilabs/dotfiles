@@ -80,10 +80,6 @@ fi
 # Install yarn
 brew install yarn
 
-# Configure powerline-shell
-ln -s ~/.dotfiles/powerline-config.py ~/.dotfiles/powerline-shell/config.py
-(cd ~/.dotfiles/powerline-shell && python install.py)
-
 # Install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install

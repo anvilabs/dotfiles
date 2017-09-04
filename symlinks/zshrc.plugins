@@ -4,6 +4,7 @@
 zplug 'plugins/osx', from:oh-my-zsh
 zplug 'plugins/z', from:oh-my-zsh
 zplug 'lib/completion', from:oh-my-zsh
+zplug 'themes/agnoster', from:oh-my-zsh
 
 # Remote plugins
 zplug 'djui/alias-tips'
