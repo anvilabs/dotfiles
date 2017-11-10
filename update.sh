@@ -11,7 +11,7 @@ fi
 exec 1> >(while read line; do echo "$(date): ${line}" >> $LOG_FILE; done) 2>&1
 
 export PATH="${PATH}:/usr/local/bin:${HOME}/.rbenv/bin"
-export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
+export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
 echo '----------'
 

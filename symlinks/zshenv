@@ -3,7 +3,7 @@
 export PATH="${PATH}:/usr/local/sbin"
 
 # Set default options for homebrew cask
-export HOMEBREW_CASK_OPTS='--appdir=/Applications --caskroom=/opt/homebrew-cask/Caskroom'
+export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
 # Make vim the default editor
 export EDITOR=vim
