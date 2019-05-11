@@ -2,6 +2,7 @@
 
 # Oh-my-zsh plugins
 zplug 'plugins/osx', from:oh-my-zsh
+zplug 'plugins/yarn', from:oh-my-zsh
 zplug 'plugins/z', from:oh-my-zsh
 zplug 'lib/completion', from:oh-my-zsh
 zplug 'themes/agnoster', from:oh-my-zsh
@@ -9,6 +10,7 @@ zplug 'themes/agnoster', from:oh-my-zsh
 # Remote plugins
 zplug 'djui/alias-tips'
 zplug 'supercrabtree/k'
+zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions'
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
